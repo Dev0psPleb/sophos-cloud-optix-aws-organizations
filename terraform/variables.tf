@@ -103,3 +103,4 @@ variable "default_region" {}
 variable "role_arn" {
     sensitive = true
 }
+variable "target_account_id" {}
