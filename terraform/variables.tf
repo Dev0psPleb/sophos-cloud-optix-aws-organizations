@@ -99,3 +99,7 @@ variable "name" {
     default = ""
 }
 variable "template_url" {}
+variable "default_region" {}
+variable "role_arn" {
+    sensitive = true
+}

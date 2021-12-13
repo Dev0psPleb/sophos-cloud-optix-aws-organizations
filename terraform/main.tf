@@ -1,6 +1,8 @@
-
 provider "aws" {
-    region = "us-east-2"
+    assume_role {
+        role_arn = var.role_arn
+    }
+    region = var.default_region
 }
 
 resource "aws_cloudformation_stack_set" "sophos-cloud-optix" {
