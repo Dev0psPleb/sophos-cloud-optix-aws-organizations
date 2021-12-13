@@ -1,20 +1,3 @@
-terraform {
-    backend "s3" {
-        bucket = "terraform-optix-stackset-693051501776"
-        key = "terraform"
-        region = "us-east-2"
-
-        workspaces {
-            name = "aws-org-optix-deployment"
-        }
-    }
-    required_providers {
-        aws = {
-            source = "hashicorp/aws"
-            version = "~> 3.69.0"
-        }
-    }
-}
 
 provider "aws" {
     region = "us-east-2"
