@@ -52,13 +52,12 @@ def apply(ou_id):
 
 def run():
   init()
-  root = get_roots()
-  ou_id = get_ous(root)
   for account in get_accounts():
     if not workspace_exists(account):
       create_workspace(account)
-    plan(ou_id)
-    apply(ou_id)
+    switch_to_workspace(account)
+    plan(account)
+    apply(account)
 
 if __name__ == "__main__":
   run()
