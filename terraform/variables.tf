@@ -103,4 +103,11 @@ variable "default_region" {}
 variable "role_arn" {
     sensitive = true
 }
-variable "target_account_id" {}
+variable "target_account_id" {
+    default = ""
+}
+variable "aws_organization_id" {
+    sensitive = true
+}
+variable "org_ou" {
+}
