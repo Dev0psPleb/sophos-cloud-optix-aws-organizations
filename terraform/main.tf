@@ -1,4 +1,18 @@
 # S3 Remote Backend
+terraform {
+    backend "s3" {
+        bucket = "terraform-optix-stackset-693051501776"
+        key = "terraform"
+        region = "us-east-2"
+    }
+    required_providers {
+        aws = {
+            source = "hashicorp/aws"
+            version = "~> 3.69.0"
+        }
+    }
+}
+
 provider "aws" {
     assume_role {
         role_arn = var.role_arn
