@@ -57,7 +57,6 @@ resource "aws_cloudformation_stack_set" "sophos-cloud-optix" {
 }
 
 resource "aws_cloudformation_stack_set_instance" "instance" {
-    account_id          = var.target_account_id
     region              = var.default_region
     stack_set_name      = aws_cloudformation_stack_set.sophos-cloud-optix.name
     
