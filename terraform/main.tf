@@ -1,3 +1,13 @@
+terraform {
+  cloud {
+    organization = "BrynardSecurity"
+
+    workspaces {
+      name = "Cloud_Optix_Multi_Account_Stack_Set"
+    }
+  }
+}
+
 provider "aws" {
     assume_role {
         role_arn = var.role_arn
