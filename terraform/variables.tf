@@ -109,5 +109,6 @@ variable "target_account_id" {
 variable "aws_organization_id" {
     sensitive = true
 }
-variable "org_ou" {
+variable "target_ous" {
+    type = set(string)
 }
