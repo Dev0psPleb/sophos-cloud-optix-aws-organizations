@@ -32,3 +32,4 @@ terraform/.terraform.lock.hcl
 npm-debug.log
 terraform/variables.auto.tfvars
 terraform/remote.tf
+terraform/stacksets.py

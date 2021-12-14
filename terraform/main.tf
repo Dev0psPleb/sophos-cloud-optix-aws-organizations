@@ -61,7 +61,7 @@ resource "aws_cloudformation_stack_set_instance" "instance" {
     stack_set_name      = aws_cloudformation_stack_set.sophos-cloud-optix.name
     
     deployment_targets {
-        organizational_unit_ids = var.org_ou
+        organizational_unit_ids = var.target_ous
     }
 
     depends_on = [
